@@ -12,13 +12,9 @@ const config = require('config')
 // @desc    Register user
 // @access  Public
 router.post('/register', [
-    check('name', 'Name is required')
-        .not()
-        .isEmpty(),
+    check('name', 'Name is required').not().isEmpty(),
     check('email', 'PLease enter a valid email').isEmail(),
-
-    check('password', 'please enter a password with 8 or more char')
-    .isLength({min: 8})
+    check('password', 'please enter a password with 8 or more char').isLength({min: 8})
 ], async (req, res) => {
 
     console.log(req.body);
