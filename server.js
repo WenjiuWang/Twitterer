@@ -14,8 +14,8 @@ io.on('connection', (socket) => {
     console.log('a user connected');
 });
   
-http.listen(3000, () => {
-    console.log('listening on *:3000');
+http.listen(3006, () => {
+    console.log('listening on *:3006');
 });
 
 //middleware
